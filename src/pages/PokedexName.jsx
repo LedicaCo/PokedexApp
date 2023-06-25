@@ -21,12 +21,12 @@ const PokedexName = () => {
       <div className="poke__header">
         <div className="poke__level-1">
           <div className="poke__content-logo-L1">
-            <img className="poke__logo" src="../../logo-pokedex.png" alt="" />
+            <img className="poke__logo" src="./logo-pokedex.png" alt="" />
           </div>
         </div>
         <div className="poke__level-2">
           <div className="poke__content-logo-L2">
-            <img className="poke__icon-2" src="../../pokedex-icon2.png" alt="" />
+            <img className="poke__icon-2" src="./pokedex-icon2.png" alt="" />
           </div>
         </div>
       </div>
@@ -191,7 +191,7 @@ const PokedexName = () => {
                     <hr className="divider" />
                     <img
                       className="poke__icon-232"
-                      src="../../icon-group-232.png"
+                      src="./icon-group-232.png"
                       alt=""
                     />
                   </div>
