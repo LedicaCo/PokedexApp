@@ -1,20 +1,69 @@
 .pagination{
     display: flex;
     justify-content: center;
-    gap: 0.5em;
-    padding: 1em;
+    background-color: #ccc;
+}
+.pagination__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    
+}
+
+.preview__btn {
+    align-items: center;
+    display:inline-flex;
+    width: auto;
+    height: 40px;
+    border: none;
+    background-color: rgb(178, 34, 34);
+    color: ghostwhite;
+    border-top-left-radius:0.5em ;
+    border-bottom-left-radius:0.5em ;
+    margin-right: 0.1em;
+    text-decoration: none;
+    font-size: 0.8em;
+    padding: 0 1em;
+    cursor: pointer; 
+    
+    
+}
+
+.bx-chevrons-left {
+    font-size: 1.5em;
+}
+
+.next__btn {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 40px;
+    border: none;
+    background-color: rgb(178, 34, 34);
+    color: ghostwhite;
+    align-items: center;
+    border-top-right-radius:0.5em ;
+    border-bottom-right-radius:0.5em ;
+    margin-left: 0.1em;
+    text-decoration: none;
+    font-size: 0.8em;
+    padding: 0 1em;
+    cursor: pointer;    
+}
+
+.bx-chevrons-right {
+    font-size: 1.5em;
 }
 .pagination_btn{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border: none;
-    background-color: whitesmoke;
-    border-radius: 0.2em;
+    background-color: transparent;
     cursor: pointer;
-    font-family: inherit;
     transition: background-color 0.3s ease;
 }
 .pagination_btn:hover{
-    background-color:  #DD1A1A;
+    background-color:  rgb(178, 34, 34);
     color: white;
 }
