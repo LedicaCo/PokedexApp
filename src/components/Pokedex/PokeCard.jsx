@@ -10,6 +10,7 @@ const pokeCard = ({ url }) => {
     getPokemonById();
   }, []);
   
+  
   const navigate = useNavigate()
 
   const handleNavigate = () => {
