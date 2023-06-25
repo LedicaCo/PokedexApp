@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="pokedex__container">
       <div className="pokedex__banner">
-        <img className='pokedex__image' src="../logo-pokedex.png" width={250} alt="" />
+        <img className='pokedex__image' src="./logo-pokedex.png" width={250} alt="" />
       </div>
       <h2 className="pokedex__greeting">¡Hi Trainer!</h2>
       <p className="pokedex__msg">To start in this application please give me your trainer name</p>
@@ -31,7 +31,7 @@ const Home = () => {
       </form>
       <footer className='pokedex__footer'>
       <div className='pokedex__footer-level-1'>
-      <img className='pokedex__icon2' src="../pokedex-icon2.png" alt="" />
+      <img className='pokedex__icon2' src="./pokedex-icon2.png" alt="" />
       </div>
       <div className='pokedex__footer-level-2'></div>
       </footer>
