@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { useEffect } from "react";
-import Loading from "../components/Pokedex/Loading";
+/* import Loading from "../components/Pokedex/Loading"; */
 
 
 const PokedexName = () => {
