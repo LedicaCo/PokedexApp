@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import { useEffect } from "react";
-/* import Loading from "../components/Pokedex/Loading"; */
+import Loading from "../components/Pokedex/Loading";
 
 
 const PokedexName = () => {
   const { name } = useParams();
 
   const url = `https://pokeapi.co/api/v2/pokemon/${name}`;
-  const [pokemon, getPokemonByName, hasError,] = useFetch(url);
+  const [pokemon, getPokemonByName, hasError,, isLoading] = useFetch(url);
 
   useEffect(() => {
     getPokemonByName();
@@ -31,7 +31,10 @@ const PokedexName = () => {
         </div>
       </div>
 
-      {hasError ? (
+      { isLoading ? (
+        <Loading/> 
+      ) :
+        hasError ? (
         <>
           <div className="msg__not-found-content">
             <i className="bx bx-error"></i>
@@ -84,16 +87,17 @@ const PokedexName = () => {
                     <span className="type__title">Type</span>
                   </div>
                   <div className="poke__types">
-                    <div className="poke__type-1">
-                      <span className="poke__type">
-                        {pokemon?.types[0].type.name}
-                      </span>
-                    </div>
-                    <div className="poke__type-2">
-                      <span className="poke__type">
-                        {pokemon?.types[1].type.name}
-                      </span>
-                    </div>
+                  {
+                    pokemon?.types.map((infoType, index) => (
+                      <div key={infoType.type.name}
+                       className={`poke__type-${index + 1}`}>
+                        <span className="poke__type">
+                          {infoType.type.name}
+                        </span>
+                      </div>
+                    ))
+                  }
+                  
                   </div>
                 </div>
                 <div className="poke__column-1">
