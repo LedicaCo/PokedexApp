@@ -63,7 +63,7 @@ const Pokedex = () => {
           </div>
         </div>
       </div>
-      <div className="poke__cards-header">
+      <div className="poke__cards-header"> 
         <p className="poke__welcome">
           Welcome <span className="poke__trainer-name">{trainerName}</span>, you
           can find your favorite pokemon{" "}

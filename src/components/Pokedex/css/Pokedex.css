@@ -2,11 +2,16 @@
     width: 100%;
 }
 
+.poke__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap:2em;
+}
+
 .poke__cards {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
 }
+
 
 .poke__cards-header {
     width: 1024px;
@@ -186,7 +191,7 @@
 .poke__name {
     text-align: center;
     margin-top: 30px;
-    text-transform: capitalize;
+    text-transform: capitalize; 
     color: currentColor;
 }
 

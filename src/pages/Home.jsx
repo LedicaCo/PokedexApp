@@ -19,7 +19,7 @@ const Home = () => {
     }
     
   return (
-    <div className="pokedex__container">
+    <div className="pokedex__home-container">
       <div className="pokedex__banner">
         <img className='pokedex__image' src="./logo-pokedex.png" width={250} alt="" />
       </div>
@@ -33,7 +33,7 @@ const Home = () => {
       <div className='pokedex__footer-level-1'>
       <img className='pokedex__icon2' src="./pokedex-icon2.png" alt="" />
       </div>
-      <div className='pokedex__footer-level-2'></div>
+      <div className='pokedex__footer-level-2'></div> 
       </footer>
     </div>
   );
