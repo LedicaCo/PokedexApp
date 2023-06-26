@@ -18,7 +18,7 @@ const PokeContainer = ({ pokemons }) => {
   return (
     <>
     <Pagination postPerPage={postPerPage} totalPost={pokemons?.length} paginate={paginate} />
-    <div className="pokeontainer">
+    <div className="poke__container">
 
         {
             currentPost?.map(pokemon =>(

@@ -1,10 +1,14 @@
-.poke__container {
+.pokedex__container {
     width: 100%;
-    background-color: rgb(245,245,245);
-
 }
 
 .poke__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+}
+
+.poke__cards-header {
     width: 1024px;
     margin: 0 auto;
 
@@ -12,7 +16,6 @@
 
 .poke__header {
     width: 100%;
-    background-color: blue;
     left: 0;
 }
 
@@ -103,13 +106,18 @@
     outline: none;
 }
 
-.poke__select {
+.select__content {
     width: 50%;
-    padding: 0 10px;
+    margin-left: 0.5em;
+}
+.poke__select {
+    width: 100%;
+    height: 37px;
     border: 0.1px solid #fff;
     outline: none;
-    
 }
+
+
 
 /*-------------------------------POKEMON NOT FOUND--------------------------------*/
 
@@ -167,7 +175,6 @@
     margin: 0 auto;
     margin-top: 100px;
     position: relative;
-    background-color: bisque;
 }
 
 .poke__image {
@@ -180,6 +187,7 @@
     text-align: center;
     margin-top: 30px;
     text-transform: capitalize;
+    color: currentColor;
 }
 
 /*---------------------------------HR DIVIDE-----------------------------*/
@@ -507,6 +515,194 @@
  .poke__go-back {
      margin-top: 30px;
  }
+ 
+ /* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) and (max-width: 767.98px) {
+    .poke__logo {
+        width: 25%;
+        margin-top: 32px;
+        margin-left: 10px;
+    }
+    
+    .poke__content-logo-L2 {
+        display: none;
+    }
+    
+    .msg__not-found-content {
+        width: 100%;
+        padding: 0 10px 0 0px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 130px;
+    }
+    
+    .bx-error {
+        font-size: 2em;
+        margin-bottom: 1em;
+       
+    }
+    
+    .msg__not-found {
+        font-size: 0.8em;
+    }
+    
+    .return__content {
+        margin-top: 1em;
+    }
+    
+    .poke__return {
+        font-size: 1em;
+    }
+    
+    .pokedex__container {
+        width: 100%;
+    }
+    
+    .poke__header {
+        width: 100%;
+    }
+    
+    .poke__icon-2 {
+        display: none;
+    }
+    
+    .poke__cards-header {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .poke__welcome {
+        width: 100%;
+    }
+    
+    .poke__welcome {
+        font-size: 1.5em;
+    }
+    
+    .poke__trainer-name {
+        font-size: 1em;
+    }
+    
+    .poke__form-content {
+        width: 100%;
+        display: grid;
+    }
+    
+    .poke__head-search {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    
+    .poke__search-content {
+        width: 100%;
+        display: flex;
+        padding: 0 10px 0 0;        
+    }
+    
+    .select__content {
+        width: 98%;
+    }
+    
+    .poke__select {
+        width: 100%;
+        height: 40px;
+        margin-top: 0.3em;
+        background-color: rgb(232,232,232);
+    }
+    
+    .artwork__container {
+        width: 100%;
+    }
+    
+    .poke__artwork-content {
+        width: 100%;
+    }
+    
+    .poke__head-img {
+        width: 100%;
+    }
+    
+    .poke__image {
+        width: 50%;
+        margin-top: -90px;
+    }
+    
+    .poke-hr__container {
+        width: 100%;
+    }
+    
+    hr.poke__left {
+        display: none;     
+    }
+    
+    hr.poke__right {
+        display: none;        
+    }
+    
+    .poke__name {
+        font-size: 2em;
+    }
+    
+    .poke__body-stats {
+        width: 50%;
+    }
+    
+    .poke__frame-1 {
+        width: 100%;
+    }
+    
+    .poke__detail {
+        width: 100%;
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    
+    .poke__column-1 {
+        width: 93%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .poke__type-1 {
+        margin-top: -7px;        
+    }
+    
+    .poke__type-2 {
+        margin-top: -7px;        
+    }
+    
+    .poke__skill-title {
+        margin-top: 25px;
+    }
+    
+    .poke__skill-1 {
+        margin-top: -7px;
+    }
+    
+    .poke__skill-2 {
+        margin-top: -7px;
+    }
+    
+    .poke__stats-content {
+        width: 90%;
+        padding: 0 10px;
+    }
+    
+        .two-column-list {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+          }
+    
+}
+    
+
+
  
 
   

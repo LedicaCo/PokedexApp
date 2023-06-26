@@ -6,7 +6,6 @@ import PokeContainer from "../components/Pokedex/PokeContainer";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-
 const Pokedex = () => {
   const [selectValue, setSelectValue] = useState("all-pokemons");
 
@@ -36,8 +35,6 @@ const Pokedex = () => {
   useEffect(() => {
     getAllTypes();
   }, []);
-  
-
 
   const searchPokemon = useRef();
   const navigate = useNavigate();
@@ -53,7 +50,7 @@ const Pokedex = () => {
   };
 
   return (
-    <div className="poke__container">
+    <div className="pokedex__container">
       <div className="poke__header">
         <div className="poke__level-1">
           <div className="poke__content-logo-L1">
@@ -66,24 +63,32 @@ const Pokedex = () => {
           </div>
         </div>
       </div>
-      <div className="poke__cards">
+      <div className="poke__cards-header">
         <p className="poke__welcome">
-          Welcome <span className="poke__trainer-name">{trainerName}</span>, you can find your favorite pokemon{" "}
+          Welcome <span className="poke__trainer-name">{trainerName}</span>, you
+          can find your favorite pokemon{" "}
         </p>
         <form className="poke__form-content" onSubmit={handleSubmit}>
           <div className="poke__head-search">
-          <div className="poke__search-content">
-            <input className="poke__input" ref={searchPokemon} type="text" placeholder="Write the pokemon name" />
-            <button className="poke__btn">Search</button>
-          </div>
-          <select className="poke__select" onChange={handleChangeType}>
-            <option value="all-pokemons">All pokemons</option>
-            {types?.results.map((typeInfo) => (
-              <option value={typeInfo.url} key={typeInfo.url}>
-                {typeInfo.name}
-              </option>
-            ))}
-          </select>
+            <div className="poke__search-content">
+              <input
+                className="poke__input"
+                ref={searchPokemon}
+                type="text"
+                placeholder="Write the pokemon name"
+              />
+              <button className="poke__btn">Search</button>
+            </div>
+            <div className="select__content">
+            <select className="poke__select" onChange={handleChangeType}>
+              <option value="all-pokemons">All pokemons</option>
+              {types?.results.map((typeInfo) => (
+                <option value={typeInfo.url} key={typeInfo.url}>
+                  {typeInfo.name}
+                </option>
+              ))}
+            </select>
+            </div>            
           </div>
         </form>
         <PokeContainer pokemons={pokemons?.results} />

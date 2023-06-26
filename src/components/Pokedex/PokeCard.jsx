@@ -18,6 +18,7 @@ const pokeCard = ({ url }) => {
   }
 
   return (
+    <div className="poke__cards">
     <article className={`pokecard ${pokemon?.types[0].type.name}`} onClick={handleNavigate}>
       <header className={`pokecard__header bg-${pokemon?.types[0].type.name}`}>
         <img className="pokecard__image"
@@ -48,6 +49,7 @@ const pokeCard = ({ url }) => {
         </ul>
       </footer>
     </article>
+    </div>
   );
 };
 

@@ -17,7 +17,7 @@ const PokedexName = () => {
 
   return (
     <>
-    <div className="poke__wanted-content">
+    <div className="poke__name-content">
       <div className="poke__header">
         <div className="poke__level-1">
           <div className="poke__content-logo-L1">
@@ -48,6 +48,7 @@ const PokedexName = () => {
         </>
       ) : (
         <>
+          <div className="artwork__container">
           <div className="poke__artwork-content">
             {" "}
             <div
@@ -196,7 +197,7 @@ const PokedexName = () => {
                     />
                   </div>
                 </div>
-                <ul className="poke__moves">
+                <ul className="poke__moves two-column-list">
                   {pokemon?.moves.map((moveInfo) => (
                     <li className="poke__moves-item" key={moveInfo.move.url}>
                       {moveInfo.move.name}
@@ -212,6 +213,7 @@ const PokedexName = () => {
                 </div>
               </section>
             </div>
+          </div>
           </div>
         </>
       )}
