@@ -41,7 +41,7 @@ const PokedexName = () => {
             </h2>
           </div>
           <div className="return__content">
-            <a className="poke__return" href="/pokedex">
+            <a className="poke__return" href="javascript:history.go(-1)">
               Go back <i className="bx bx-left-arrow-circle"></i>
             </a>
           </div>
@@ -207,7 +207,7 @@ const PokedexName = () => {
               </section>
               <section className="poke__go-back">
                 <div className="return__content">
-                  <a className="poke__return" href="pokedex#/pokedex">
+                  <a className="poke__return" href="javascript:history.go(-1)">
                     Go back <i className="bx bx-left-arrow-circle"></i>
                   </a>
                 </div>
