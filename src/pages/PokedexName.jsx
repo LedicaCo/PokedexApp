@@ -135,12 +135,12 @@ const PokedexName = () => {
                     {pokemon?.stats[0].stat.name}
                   </span>
                   <span className="poke__stats-value">
-                    {pokemon?.stats[0].base_stat}/150
+                    {pokemon?.stats[0].base_stat}/255
                   </span>
                 </div>
                 <progress
                   className="poke__bar-progress"
-                  max="150"
+                  max="255"
                   value={pokemon?.stats[0].base_stat}
                 ></progress>
               </div>
@@ -150,12 +150,12 @@ const PokedexName = () => {
                     {pokemon?.stats[1].stat.name}
                   </span>
                   <span className="poke__stats-value">
-                    {pokemon?.stats[1].base_stat}/150
+                    {pokemon?.stats[1].base_stat}/190
                   </span>
                 </div>
                 <progress
                   className="poke__bar-progress"
-                  max="150"
+                  max="190"
                   value={pokemon?.stats[1].base_stat}
                 ></progress>
               </div>
@@ -165,12 +165,12 @@ const PokedexName = () => {
                     {pokemon?.stats[2].stat.name}
                   </span>
                   <span className="poke__stats-value">
-                    {pokemon?.stats[2].base_stat}/150
+                    {pokemon?.stats[2].base_stat}/250
                   </span>
                 </div>
                 <progress
                   className="poke__bar-progress"
-                  max="150"
+                  max="250"
                   value={pokemon?.stats[2].base_stat}
                 ></progress>
               </div>
@@ -180,12 +180,12 @@ const PokedexName = () => {
                     {pokemon?.stats[5].stat.name}
                   </span>
                   <span className="poke__stats-value">
-                    {pokemon?.stats[5].base_stat}/150
+                    {pokemon?.stats[5].base_stat}/180
                   </span>
                 </div>
                 <progress
                   className="poke__bar-progress"
-                  max="150"
+                  max="180"
                   value={pokemon?.stats[5].base_stat}
                 ></progress>
               </div>

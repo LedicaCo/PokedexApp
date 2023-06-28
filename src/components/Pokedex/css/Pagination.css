@@ -1,69 +1,77 @@
-.pagination{
+.container {
     display: flex;
     justify-content: center;
-    background-color: #ccc;
-}
-.pagination__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 30px;
-    
-}
-
-.preview__btn {
-    align-items: center;
-    display:inline-flex;
-    width: auto;
     height: 40px;
-    border: none;
-    background-color: rgb(178, 34, 34);
-    color: ghostwhite;
-    border-top-left-radius:0.5em ;
-    border-bottom-left-radius:0.5em ;
-    margin-right: 0.1em;
-    text-decoration: none;
-    font-size: 0.8em;
-    padding: 0 1em;
-    cursor: pointer; 
+        
+    .previousPage {
+        background-color: rgb(178, 34, 34);
+        border: none;
+        padding: 5px 15px;
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+        color: ghostwhite;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        
+        .bxs-left-arrow {
+            font-size: 1.3em;
+        }
+        
+
+        
+    }
     
+    .input__content {
+        padding: 0 22px;
+        display:inline-flex;
+        flex-direction: row;
+        background-color: ghostwhite;
+    }
     
-}
-
-.bx-chevrons-left {
-    font-size: 1.5em;
-}
-
-.next__btn {
-    display: flex;
-    align-items: center;
-    width: auto;
-    height: 40px;
-    border: none;
-    background-color: rgb(178, 34, 34);
-    color: ghostwhite;
-    align-items: center;
-    border-top-right-radius:0.5em ;
-    border-bottom-right-radius:0.5em ;
-    margin-left: 0.1em;
-    text-decoration: none;
-    font-size: 0.8em;
-    padding: 0 1em;
-    cursor: pointer;    
-}
-
-.bx-chevrons-right {
-    font-size: 1.5em;
-}
-.pagination_btn{
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.pagination_btn:hover{
-    background-color:  rgb(178, 34, 34);
-    color: white;
+    .nextPage {
+        background-color: rgb(178, 34, 34);
+        border: none;
+        padding: 5px 15px;
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+        color: ghostwhite;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        
+        .bxs-right-arrow {
+            font-size: 1.3em;
+        }
+        
+    }
+    
+    .input__pagination {
+        padding: 5px 1px;
+        width: 25px;
+        height: 30px;
+        border: none;
+        font-size: 0.9rem;
+        font-family: 'Comfortaa';
+        font-weight: bold;
+        color: rgb(178, 34, 34);;
+    }
+    
+    .poke__of {
+        background-color: ghostwhite;
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        
+    }
+    
+    .poke__of-span {
+        font-size: 0.9rem;
+        
+    }
 }

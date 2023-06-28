@@ -1,35 +1,25 @@
 import { useState } from "react";
 import PokeCard from "./PokeCard";
-import './css/PokeContainer.css'
+import "./css/PokeContainer.css";
 import Pagination from "./Pagination";
 
 const PokeContainer = ({ pokemons }) => {
-  
-  const [currentPage, setCurrentPage] = useState(1)
-  const [postPerPage] = useState(8)
+  const [page, setPage] = useState(1);
+  const [perPage, setPerPage] = useState(8);
 
+  const maximun = pokemons && pokemons.length / perPage;
 
-  const indexOfLastPost=currentPage * postPerPage;
-  const indexOfFirstPost=indexOfLastPost - postPerPage;
-  const currentPost = pokemons?.slice(indexOfFirstPost,indexOfLastPost)
-
-  const paginate =(PageNumber)=>setCurrentPage(PageNumber)
-    
   return (
     <>
-    <Pagination postPerPage={postPerPage} totalPost={pokemons?.length} paginate={paginate} />
-    <div className="poke__container">
+      <Pagination page={page} setPage={setPage} maximun={maximun} />
+      <div className="poke__container">
+        {pokemons?.slice((page - 1) * perPage, (page - 1) * perPage + perPage)          
+          .map((pokemon) => (
+            <PokeCard key={pokemon.url} url={pokemon.url} />
+          ))}
+      </div>
+    </>
+  );
+};
 
-        {
-            currentPost?.map(pokemon =>(
-                <PokeCard 
-                key={pokemon.url}
-                url={pokemon.url}
-                />
-            ))
-        }
-    </div></>
-  )
-}
-
-export default PokeContainer
+export default PokeContainer;

@@ -1,32 +1,61 @@
-
+import { useState } from "react";
 import "./css/Pagination.css";
 
-const Pagination = ({ postPerPage, totalPost, paginate }) => {
-  const PageNumbers = [];
+export const Pagination = ({ page, setPage, maximun }) => {
+  const [input, setInput] = useState(1);
 
-  for (let i = 1; i <= Math.ceil(totalPost / postPerPage); i++) {
-    PageNumbers.push(i);
-  }
+  const nextPage = () => {
+    setInput(parseInt(input) + 1);
+    setPage(parseInt(page) + 1);
+  };
+
+  const previousPage = () => {
+    setInput(parseInt(input) - 1);
+    setPage(parseInt(page) - 1);
+  };
+
+  const onKeyDown = (e) => {
+    if (e.keyCode == 13) {
+      setPage(parseInt(e.target.value));
+      if (
+        parseInt(e.target.value < 1) ||
+        parseInt(e.target.value) > Math.ceil(maximun) ||
+        isNaN(parseInt(e.target.value))
+      ) {
+        setPage(1);
+        setInput(1);
+      } else {
+        setPage(parseInt(e.target.value));
+      }
+    }
+  };
+
+  const onChange = (e) => {
+    setInput(e.target.value);
+  };
 
   return (
-    <>
-      <div className="pagination__content">
-      <a className="preview__btn"><i className='bx bx-chevrons-left'></i> Preview</a>
-        <ul className="pagination">
-          {PageNumbers.map((number) => (
-            <li key={number}>
-              <button
-                className="pagination_btn"
-                onClick={() => paginate(number)}
-              >
-                {number}
-              </button>
-            </li>
-          ))}
-        </ul>
-        <a className="next__btn">Next <i className='bx bx-chevrons-right'></i></a>
+    <div className="container">
+      <button className="previousPage" disabled={page === 1 || page < 1} onClick={previousPage}>
+        <i className="bx bxs-left-arrow"></i>
+      </button>
+      <div className="input__content">
+      <input className="input__pagination"
+        onChange={(e) => onChange(e)}
+        onKeyDown={(e) => onKeyDown(e)}
+        name="page"
+        autoComplete="off"
+        value={input} 
+      />&nbsp;
+      <p className="poke__of"> of &nbsp;<span className="poke__of-span"> {Math.ceil(maximun)}</span> </p>
       </div>
-    </>
+      <button className="nextPage"
+        disabled={page === Math.ceil(maximun) || page > Math.ceil(maximun)}
+        onClick={nextPage}
+      >
+        <i className="bx bxs-right-arrow"></i>
+      </button>
+    </div>
   );
 };
 
