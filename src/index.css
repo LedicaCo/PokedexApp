@@ -28,6 +28,22 @@ img {
     --water-color: rgb(30, 144, 255);
     --bug-color: rgb(34, 151, 112);
     --grass-color: rgb(32, 178, 170);
+    --fighting-color:#f5850e;
+    --flaying-color:#ad94b8;
+    --poison-color:#8f41cb;
+    --ground-color:#b199b5;
+    --rock-color:#b6a0b0;
+    --ghost-color:#704170;
+    --steel-color:#60a1b8;
+    --electric-color:#fac000;
+    --psychic-color:#ef4179;
+    --ice-color:#3fd8ff;
+    --dark-color:#50413f;
+    --fairy-color:#ef71ef;
+    --dragon-color:#5061e1;
+    --unknown-color:black;
+    
+    
     --bg-grass: linear-gradient(to top left, #33cc75 0%, #006666 86%);
     --bg-fire: linear-gradient(to bottom right, #ff0000 0%, #ffff00 86%);
     --bg-water: linear-gradient(to top left, #00ffff 0%, #0000ff 86%) ;
@@ -39,5 +55,7 @@ img {
 @media (max-width: 600px) and (max-height: 800px) {
     body {
         font-size: 14px;
+        overflow-x: hidden;
     }
+    
 }

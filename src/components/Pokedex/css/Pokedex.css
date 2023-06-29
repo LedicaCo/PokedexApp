@@ -1,12 +1,6 @@
-.pokedex__container {
-    width: 100%;
-}
 
-.poke__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap:2em;
-}
+
+
 
 .poke__cards {
     width: 100%;
@@ -522,7 +516,13 @@
  }
  
  /* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) and (max-width: 767.98px) {
+ @media (max-width: 600px) and (max-height: 800px)  {
+    
+
+    .poke__container {
+        width: 100%;
+    }
+    
     .poke__logo {
         width: 25%;
         margin-top: 32px;
@@ -608,7 +608,8 @@
     }
     
     .select__content {
-        width: 98%;
+        width: 100%;
+        margin-left: 0;
     }
     
     .poke__select {
@@ -697,12 +698,12 @@
         padding: 0 10px;
     }
     
-        .two-column-list {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 10px;
-          }
+    .two-column-list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
     
 }
     

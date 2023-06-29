@@ -3,7 +3,8 @@
     justify-content: center;
     margin-bottom: 30px;
     height: 40px;
-        
+    width: auto;
+}
     .previousPage {
         background-color: rgb(178, 34, 34);
         border: none;
@@ -74,4 +75,20 @@
         font-size: 0.9rem;
         
     }
+    
+    /* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .container {
+        width: 80%;
+        display: flex;
+        justify-content: center;    
+        height: 40px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+    
+    .main__container {
+        width: 100%;
+    }
 }
+
