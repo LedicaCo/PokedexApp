@@ -131,8 +131,8 @@
     color: var(--fighting-color);    
 }
 
-.flaying {
-    color: var(--flaying-color);    
+.flying {
+    color: var(--flying-color);    
 }
 
 .poison {
@@ -205,13 +205,61 @@
 
 .bg-normal {
     background-image: var(--bg-normal);
+}
+
+.bg-electric {
+    background-image: var(--bg-electric);
 } 
 
+.bg-ground {
+    background-image: var(--bg-ground);
+}
 
+.bg-poison {
+    background-image: var(--bg-poison);
+}
+
+.bg-fairy {
+    background-image: var(--bg-fairy);
+}
+
+.bg-flying {
+    background-image: var(--bg-flying);
+}
+
+.bg-steel {
+    background-image: var(--bg-steel);
+}
+
+.bg-rock {
+    background-image: var(--bg-rock);
+}
+
+.bg-fighting {
+    background-image: var(--bg-fighting);
+}
+
+.bg-ghost {
+    background-image: var(--bg-ghost);
+}
+
+.bg-ice {
+    background-image: var(--bg-ice);
+}
+
+.bg-dragon {
+    background-image: var(--bg-dragon);
+}
+
+.bg-dark {
+    background-image: var(--bg-dark);
+}
+
+.bg-psychic {
+    background-image: var(--bg-psychic);
+}
 
 @media (max-width: 600px) and (max-height: 800px){
-    
-
     
     .pokecard {
         width: 100%;
