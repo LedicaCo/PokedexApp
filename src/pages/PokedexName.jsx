@@ -14,6 +14,7 @@ const PokedexName = () => {
     getPokemonByName();
   }, [name]);
 
+  const srcSprites = pokemon?.sprites.other["official-artwork"].front_default ? pokemon?.sprites.other["official-artwork"].front_default : pokemon?.sprites.front_default
 
   return (
     <>
@@ -59,7 +60,7 @@ const PokedexName = () => {
             >
               <img
                 className="poke__image"
-                src={pokemon?.sprites.other["official-artwork"].front_default}
+                src={srcSprites}
                 alt=""
               />
             </div>
@@ -100,21 +101,24 @@ const PokedexName = () => {
                   
                   </div>
                 </div>
-                <div className="poke__column-1">
+                
+                <div className="poke__column-2">
                   <div className="poke__skill-title">
                     <span className="skill__title">Skills</span>
                   </div>
                   <div className="poke__skills">
-                    <div className="poke__skill-1">
-                      <span className="poke__skill">
-                        {pokemon?.abilities[0].ability.name}
-                      </span>
-                    </div>
-                    <div className="poke__skill-2">
-                      <span className="poke__skill">
-                        {pokemon?.abilities[1].ability.name}
-                      </span>
-                    </div>
+                  {
+                    pokemon?.abilities.map((infoAbility, index) => (
+                      <div key={infoAbility.ability.name}
+                       className={`poke__skill-${index + 1}`}>
+                        <span className="poke__skill">
+                          {infoAbility.ability.name}
+                        </span>
+                      </div>
+                    ))
+                    
+                  }
+                    
                   </div>
                 </div>
               </div>
